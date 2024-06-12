@@ -8,18 +8,25 @@ You can use any version of Matlan to run this program.
 
 The program documentation is still in Indonesian language format, you can use Google Translate to understand the comments in each part.
 
-** This program is still not perfect, I have tried it by inputting 60 images per class, and 1000 epochs. 
+> This program is still not perfect, I have tried it by inputting 60 images per class, and 1000 epochs. 
 Accuracy still shows around 70%.
 Perhaps using more appropriate layers and more specific image augmentation can increase the accuracy
 
-# Here are instructions on how you can use it:
+### Here are instructions on how you can use it:
 1. Copy this repository to your local folder
 2. Create a folder about the objects you want to classify in your project environment
-    >> Example: Skin Diseases>>Class Subfolder
-3. Enter jpg format photos in each class folder, you can adjust the number of photos in each class.
-4. In the .m extension file, you can change the input code
-    imds = imageDatastore('YourMainFolder',...
+3. Example: Skin Diseases>>Class Subfolder
+4. Enter jpg format photos in each class folder, you can adjust the number of photos in each class.
+5. In the .m extension file, you can change the input code
+    ```
+   imds = imageDatastore('YourMainFolder',...
         'IncludeSubfolders',true,...
         'LabelSource','foldernames');
-5. You can change the class name in the confusion matrix by changing classx to your object class
-    classLabels = {'Class1', 'Class2', 'Class3', 'Class4'};
+    ```
+7. You can change the class name in the confusion matrix by changing classx to your object class
+   ```
+   classLabels = {'Class1', 'Class2', 'Class3', 'Class4'};
+   ```
+
+Feel free to ask me at
+trianaprilianto3@gmail.com
